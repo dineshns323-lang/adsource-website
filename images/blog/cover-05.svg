@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <!-- PLACEHOLDER cover — replace with your own image (1200x675 JPG/PNG/WebP) -->
+  <rect width="1200" height="675" fill="#FFFFFF"/>
+  <circle cx="880" cy="320" r="200" fill="none" stroke="#17151F" stroke-width="22"/><circle cx="880" cy="320" r="120" fill="none" stroke="#17151F" stroke-width="22"/><circle cx="880" cy="320" r="44" fill="#CCF140" stroke="#17151F" stroke-width="16"/>
+  <text x="80" y="560" font-family="'Arial Black','Segoe UI Black',Arial,sans-serif" font-weight="900" font-size="76" fill="#17151F">Meta ads</text>
+  <text x="80" y="612" font-family="'Segoe UI',Arial,sans-serif" font-weight="700" font-size="22" fill="#17151F" opacity=".55">AdSource blog · sample cover</text>
+</svg>

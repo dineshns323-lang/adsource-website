@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <!-- PLACEHOLDER cover — replace with your own image (1200x675 JPG/PNG/WebP) -->
+  <rect width="1200" height="675" fill="#221E33"/>
+  <path d="M860 130 L900 260 L1030 300 L900 340 L860 470 L820 340 L690 300 L820 260 Z" fill="#B8A6FF"/><path d="M1060 420 L1078 470 L1128 488 L1078 506 L1060 556 L1042 506 L992 488 L1042 470 Z" fill="#B8A6FF" opacity=".7"/>
+  <text x="80" y="560" font-family="'Arial Black','Segoe UI Black',Arial,sans-serif" font-weight="900" font-size="76" fill="#B8A6FF">AI tools</text>
+  <text x="80" y="612" font-family="'Segoe UI',Arial,sans-serif" font-weight="700" font-size="22" fill="#B8A6FF" opacity=".55">AdSource blog · sample cover</text>
+</svg>

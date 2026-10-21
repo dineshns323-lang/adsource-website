@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ===== SEO: page title, description and social sharing preview ===== -->
+<title>AdSource | Video Editing, Motion Graphics & AI Video Editing</title>
+<meta name="description" content="AdSource edits YouTube videos, creates motion graphics and uses AI video editing to turn your footage into content that gets watched. Plus Reels, Shorts and ads that grow your brand.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AdSource">
+<meta property="og:title" content="AdSource | Video Editing, Motion Graphics & AI Video Editing">
+<meta property="og:description" content="Videos that stop the scroll. Edits that grow your channel. YouTube editing, motion graphics, AI video editing and short-form video.">
+<!-- After you put the site online, change this to the full address, e.g. https://www.adsource.in/images/og-image.png -->
+<meta property="og:image" content="images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#CCF140">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("asZoom")){sessionStorage.removeItem("asZoom");if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("as-arriving")}}catch(e){}</script>
+<!-- 3D library for the hero animation (home page only) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+<body data-page="home">
+
+<!-- Header is built by script.js (same on every page) -->
+<header id="site-header"></header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span> Video editing studio</span>
+        <!-- HERO HEADLINE: edit the two lines below -->
+        <h1>
+          <span class="line"><span>Videos that stop the scroll.</span></span>
+          <span class="line"><span class="hl">Edits that grow your channel.</span></span>
+        </h1>
+        <p class="lead">We edit YouTube videos, create motion graphics and use AI to turn your raw footage into content people actually watch — plus the Reels, Shorts and ads that help it reach more people.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-dark">Start your project <span class="arrow">→</span></a>
+          <a href="services.html" class="btn btn-ghost">Our services</a>
+        </div>
+        <div class="hero-proof">
+          <span>Revisions included</span>
+          <span>Fast turnaround</span>
+          <span>AI-powered workflow</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <canvas id="scene" role="img" aria-label="3D video icons: a play button, clapperboard, phone, video camera and editing timeline. Click one to see that service."></canvas>
+        <div class="tip" id="tip"></div>
+        <span class="scene-hint" id="hint">Move your mouse · click a shape</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLATFORM STRIP (icons are added by script.js) ================= -->
+  <div class="marquee" id="platform-strip" role="img" aria-label="Platforms we work with: YouTube, Instagram, Facebook, Meta, TikTok, Amazon, Flipkart and Shopify"></div>
+
+  <!-- ================= SERVICES PREVIEW ================= -->
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">What we do</span>
+          <h2>Video first. Growth built in.</h2>
+        </div>
+        <p>Editing, motion design and AI video are at the heart of what we do. When you're ready to reach more people, our marketing team puts your videos to work.</p>
+      </div>
+
+      <div class="svc-grid">
+        <article class="svc-card feature" data-reveal>
+          <span class="badge">Most popular</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg></span>
+          <h3><a class="card-link" href="service.html?s=youtube-editing">YouTube Video Editing</a></h3>
+          <p>Full long-form edits with tight pacing, colour, clean sound, subtitles, B-roll and thumbnails — built to keep viewers watching.</p>
+          <div class="tags"><span>Cuts &amp; pacing</span><span>Colour</span><span>Sound</span><span>Thumbnails</span></div>
+          <span class="as-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </article>
+        <article class="svc-card" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19C7 5 17 19 20 5"/><rect x="2" y="17" width="4" height="4" rx="1"/><rect x="18" y="3" width="4" height="4" rx="1"/></svg></span>
+          <h3><a class="card-link" href="service.html?s=motion-graphics">Motion Graphics</a></h3>
+          <p>Animated logos, titles, lower thirds, explainers and animated ads that make your brand look polished and memorable.</p>
+          <div class="tags"><span>Logo animation</span><span>Explainers</span><span>Titles</span></div>
+          <span class="as-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </article>
+        <article class="svc-card" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg></span>
+          <h3><a class="card-link" href="service.html?s=ai-video-editing">AI Video Editing</a></h3>
+          <p>Auto subtitles, AI voiceovers and avatars, background removal, upscaling and long videos turned into ready-to-post clips.</p>
+          <div class="tags"><span>AI subtitles</span><span>Voiceovers</span><span>Repurposing</span></div>
+          <span class="as-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </article>
+        <article class="svc-card" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="3"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg></span>
+          <h3><a class="card-link" href="service.html?s=short-form-video">Short-Form Video</a></h3>
+          <p>Reels, YouTube Shorts and TikToks with strong hooks, fast edits, bold captions and formats that are trending right now.</p>
+          <div class="tags"><span>Hooks &amp; scripts</span><span>Captions</span><span>Trends</span></div>
+          <span class="as-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </article>
+      </div>
+
+      <p class="svc-small-title">Digital marketing</p>
+      <div class="svc-mini-grid">
+        <a class="svc-mini" href="service.html?s=social-media-ads" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg></span>
+          <span><strong>Social Media Ads</strong><small>Meta &amp; Instagram</small></span>
+        </a>
+        <a class="svc-mini" href="service.html?s=social-media-management" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M8 2.5v4M16 2.5v4M3 9.5h18"/><path d="M12 17.5s-3-1.8-3-3.8a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2-3 3.8-3 3.8z" fill="currentColor"/></svg></span>
+          <span><strong>Social Media Management</strong><small>Content, posting &amp; growth</small></span>
+        </a>
+        <a class="svc-mini" href="service.html?s=ecommerce-ads" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12.5H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+          <span><strong>E-commerce Ads</strong><small>Amazon, Flipkart &amp; Shopify</small></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSIDE THE EDIT: exploded-layers animation (driven by script.js) ================= -->
+  <section class="block" style="background:var(--white)">
+    <div class="wrap ba-wrap">
+      <div data-reveal>
+        <span class="eyebrow">Inside the edit</span>
+        <h2>From raw footage to ready to post</h2>
+        <p class="lx-intro">Every video we deliver is built in layers. Hover a step to see it.</p>
+        <!-- data-ed-step links each line to the matching layer in the animation -->
+        <ul class="checks lx-list">
+          <li data-ed-step="1" tabindex="0">Colour correction and grading</li>
+          <li data-ed-step="2" tabindex="0">Clean audio and balanced music</li>
+          <li data-ed-step="3" tabindex="0">Subtitles, titles and lower thirds</li>
+          <li data-ed-step="4" tabindex="0">Branding that matches your channel</li>
+        </ul>
+      </div>
+
+      <!-- TEXT YOU CAN CHANGE: file name, layer names, subtitle words and lower-third name -->
+      <div class="lx" id="editor" data-state="raw" role="img" aria-label="Animation: raw footage splits into the layers of an edit — colour grade, audio, subtitles and branding — then comes back together as the finished video" data-reveal>
+        <div class="lx-hud">
+          <span class="lx-status"><s></s><span class="lx-st">Raw footage</span></span>
+          <span class="lx-file">your_video.mp4</span>
+        </div>
+
+        <div class="lx-stage">
+          <div class="lx-shadow"></div>
+          <div class="lx-iso">
+
+            <!-- Layer 0: raw footage -->
+            <div class="lx-layer lx-footage" data-layer="0" style="--i:0">
+              <svg class="lx-scene" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs><linearGradient id="lxSkyRaw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#77757B"/><stop offset="1" stop-color="#A9A6A0"/></linearGradient></defs>
+                <rect width="320" height="180" fill="url(#lxSkyRaw)"/>
+                <circle cx="214" cy="80" r="22" fill="#D8D5CE"/>
+                <path d="M0 118 C40 94 80 102 120 112 S200 90 240 102 S300 96 320 102 V180 H0Z" fill="#8A878C"/>
+                <path d="M0 140 C50 120 100 128 150 136 S240 120 320 132 V180 H0Z" fill="#6C6A70"/>
+                <path d="M0 160 C60 146 120 152 180 158 S270 148 320 154 V180 H0Z" fill="#4B4A50"/>
+                <path d="M60 56q5-4 10 0q5-4 10 0M92 46q4-3 8 0q4-3 8 0" fill="none" stroke="rgba(40,30,60,.5)" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <span class="lx-rec"><i></i>REC</span>
+              <span class="lx-tag">Raw footage</span>
+            </div>
+
+            <!-- Layer 1: colour grade -->
+            <div class="lx-layer lx-colour" data-layer="1" style="--i:1">
+              <div class="lx-wheels"><i></i><i></i><i></i></div>
+              <span class="lx-tag"><b>01</b> Colour grade</span>
+            </div>
+
+            <!-- Layer 2: audio -->
+            <div class="lx-layer lx-audio" data-layer="2" style="--i:2">
+              <div class="lx-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="lx-tag"><b>02</b> Audio</span>
+            </div>
+
+            <!-- Layer 3: subtitles -->
+            <div class="lx-layer lx-subs" data-layer="3" style="--i:3">
+              <div class="lx-sub">edits that <em>keep</em> people watching</div>
+              <span class="lx-tag"><b>03</b> Subtitles</span>
+            </div>
+
+            <!-- Layer 4: branding -->
+            <div class="lx-layer lx-brand" data-layer="4" style="--i:4">
+              <div class="lx-lt"><strong>YOUR CHANNEL</strong><small>Episode 12 · Travel vlog</small></div>
+              <img class="lx-bug" src="images/logo-icon.png" alt="" width="256" height="256">
+              <span class="lx-tag"><b>04</b> Branding</span>
+            </div>
+
+            <!-- Final: all layers combined -->
+            <div class="lx-layer lx-final" style="--i:5">
+              <svg class="lx-scene" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lxSkyGrade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#251C5A"/><stop offset="1" stop-color="#FF9F73"/></linearGradient>
+                  <radialGradient id="lxSunGlow"><stop offset="0" stop-color="rgba(255,226,160,.7)"/><stop offset="1" stop-color="rgba(255,226,160,0)"/></radialGradient>
+                </defs>
+                <rect width="320" height="180" fill="url(#lxSkyGrade)"/>
+                <circle cx="214" cy="80" r="70" fill="url(#lxSunGlow)"/>
+                <circle cx="214" cy="80" r="22" fill="#FFE9A8"/>
+                <path d="M0 118 C40 94 80 102 120 112 S200 90 240 102 S300 96 320 102 V180 H0Z" fill="#7B66E0"/>
+                <path d="M0 140 C50 120 100 128 150 136 S240 120 320 132 V180 H0Z" fill="#4A3C9A"/>
+                <path d="M0 160 C60 146 120 152 180 158 S270 148 320 154 V180 H0Z" fill="#1D1838"/>
+                <path d="M60 56q5-4 10 0q5-4 10 0M92 46q4-3 8 0q4-3 8 0" fill="none" stroke="rgba(40,30,60,.6)" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <div class="lx-lt"><strong>YOUR CHANNEL</strong><small>Episode 12 · Travel vlog</small></div>
+              <img class="lx-bug" src="images/logo-icon.png" alt="" width="256" height="256">
+              <div class="lx-sub">edits that <em>keep</em> people watching</div>
+            </div>
+
+          </div>
+          <span class="lx-ready">Ready to post ✓</span>
+        </div>
+
+        <div class="lx-steps"><span>Colour</span><span>Audio</span><span>Subtitles</span><span>Branding</span><span>Ready</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW WE WORK ================= -->
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">How we work</span>
+          <h2>Four simple steps</h2>
+        </div>
+        <p>No complicated process. You send the footage, we handle the rest and keep you in the loop.</p>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal><h3>Send your footage</h3><p>Share your files by Google Drive, Dropbox or WeTransfer, with any notes, references and brand assets.</p></div>
+        <div class="step" data-reveal><h3>We edit</h3><p>Our editors cut, design, grade and polish your video to match your style and goals.</p></div>
+        <div class="step" data-reveal><h3>You review</h3><p>Watch the draft and leave clear, time-stamped feedback. We make the changes quickly.</p></div>
+        <div class="step" data-reveal><h3>Final delivery</h3><p>Get your finished video in the right formats, ready to upload to every platform.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="block dark why">
+    <div class="orb a"></div><div class="orb b"></div>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Why choose us</span>
+          <h2>Edits made to perform</h2>
+        </div>
+        <p>We don't just make videos look good. Every cut, caption and animation has one job: keep people watching.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+          <h3>Retention-first</h3>
+          <p>Pacing, hooks and pattern interrupts that keep viewers watching longer.</p>
+        </div>
+        <div class="why-item" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+          <h3>Fast turnaround</h3>
+          <p>Clear deadlines and quick delivery, so you can post on schedule.</p>
+        </div>
+        <div class="why-item" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8z"/></svg></span>
+          <h3>Creative + AI</h3>
+          <p>Modern AI tools for speed, human editors for story, style and quality.</p>
+        </div>
+        <div class="why-item" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M7 16v-5M12 16V7M17 16v-8"/></svg></span>
+          <h3>Transparent</h3>
+          <p>Clear quotes, agreed revisions and honest reporting. No surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LATEST BLOG POSTS (from BLOG_POSTS in script.js) ================= -->
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">From the blog</span>
+          <h2>Tips for creators &amp; brands</h2>
+        </div>
+        <a href="blog.html" class="btn btn-ghost">All articles <span class="arrow">→</span></a>
+      </div>
+      <div class="post-grid" id="latest-posts"></div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ — edit the questions and answers below ================= -->
+  <section class="block" style="padding-top:0" id="faq">
+    <div class="wrap faq-wrap">
+      <div data-reveal>
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions, answered</h2>
+        <p style="color:var(--muted);margin:18px 0 26px;font-size:1.08rem">Can't find what you're looking for? Send us a message — we're happy to help.</p>
+        <a href="#contact" class="btn btn-dark">Ask a question</a>
+      </div>
+      <div class="faq">
+        <details data-reveal>
+          <summary>How long does an edit take?</summary>
+          <div class="answer"><p>Shorts and Reels are usually ready in 24–48 hours. A standard YouTube video (10–20 minutes) takes about 3–5 working days, and motion graphics or explainer animations take 5–10 working days depending on detail. Need it faster? Ask about priority delivery.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>How many revisions do I get?</summary>
+          <div class="answer"><p>Every project includes two rounds of revisions. Most clients are happy after the first round. Extra rounds or big changes to the original brief can be added for a small fee — we'll always tell you before any extra cost.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>Which file formats do you accept and deliver?</summary>
+          <div class="answer"><p>Send us footage in any common format — MP4, MOV, MXF, ProRes, or straight from your phone or camera. We deliver in MP4 (H.264 or H.265) by default, sized for each platform: 16:9 for YouTube, 9:16 for Reels, Shorts and TikTok, and 1:1 or 4:5 for feed posts. Project files and other formats are available on request.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>How much does it cost?</summary>
+          <div class="answer"><p>Pricing depends on video length, how much footage there is, and the level of graphics or animation. We give you a clear, fixed quote before we start, and offer monthly packages for regular YouTube and short-form content. Tell us about your project for a free quote.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>How do I send you my footage?</summary>
+          <div class="answer"><p>Upload your files to Google Drive, Dropbox or WeTransfer and share the link with us. Include any notes, logos, fonts, music or example videos you like, and we'll take it from there.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT CTA ================= -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-card">
+        <div class="intro" data-reveal>
+          <span class="eyebrow" style="color:var(--ink)">Let's work together</span>
+          <h2>Ready to make videos people watch?</h2>
+          <p>Tell us about your project and we'll send a free quote and a plan for your videos.</p>
+          <ul class="perks">
+            <li>Free quote within one working day</li>
+            <li>Two rounds of revisions included</li>
+            <li>Delivered ready for every platform</li>
+          </ul>
+          <div class="quick-contact">
+            <a class="btn btn-ghost btn-sm" data-wa-link href="#">Chat on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- Contact form. Delivery is set in script.js → CONFIG.formEndpoint -->
+        <form class="lead-form" id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+              <span class="err" id="e-email">Please enter a valid email.</span>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="f-service">Service</label>
+              <select id="f-service" name="service" data-services required aria-describedby="e-service"></select>
+              <span class="err" id="e-service">Please choose a service.</span>
+            </div>
+            <div class="field full">
+              <label for="f-budget">Budget <span class="opt">(optional)</span></label>
+              <select id="f-budget" name="budget" data-budgets></select>
+            </div>
+            <div class="field full">
+              <label for="f-details">Project details</label>
+              <textarea id="f-details" name="details" placeholder="What kind of video is it, how long, and when do you need it?"></textarea>
+            </div>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          </div>
+          <button type="submit" class="btn btn-dark">Send my request <span class="arrow">→</span></button>
+          <p class="form-error" role="alert"></p>
+          <p class="form-note">We reply within one working day. Your details are never shared.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer is built by script.js (same on every page) -->
+<footer id="site-footer"></footer>
+</body>
+</html>

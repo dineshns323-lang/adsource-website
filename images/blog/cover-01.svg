@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <!-- PLACEHOLDER cover — replace with your own image (1200x675 JPG/PNG/WebP) -->
+  <rect width="1200" height="675" fill="#17151F"/>
+  <rect x="640" y="150" width="440" height="300" rx="40" fill="#CCF140" opacity=".9"/><path d="M820 240 L940 300 L820 360 Z" fill="#17151F"/>
+  <text x="80" y="560" font-family="'Arial Black','Segoe UI Black',Arial,sans-serif" font-weight="900" font-size="76" fill="#CCF140">YouTube</text>
+  <text x="80" y="612" font-family="'Segoe UI',Arial,sans-serif" font-weight="700" font-size="22" fill="#CCF140" opacity=".55">AdSource blog · sample cover</text>
+</svg>

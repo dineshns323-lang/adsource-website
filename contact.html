@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ===== SEO ===== -->
+<title>Contact | Get a Free Video Editing Quote | AdSource</title>
+<meta name="description" content="Tell us about your video project and get a free quote within one working day. Call, email or WhatsApp AdSource.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AdSource">
+<meta property="og:title" content="Contact AdSource">
+<meta property="og:description" content="Get a free quote for YouTube editing, motion graphics, AI video editing and more.">
+<meta property="og:image" content="images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#CCF140">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("asZoom")){sessionStorage.removeItem("asZoom");if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("as-arriving")}}catch(e){}</script>
+<script src="script.js" defer></script>
+</head>
+<body data-page="contact">
+
+<header id="site-header"></header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h1>Let's talk about your video</h1>
+      <p>Fill in the form, call us or send a WhatsApp message. We reply within one working day.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <!-- These cards show the details from script.js → CONFIG -->
+      <div class="contact-info">
+        <a class="info-card" href="#" data-contact="phone" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span>
+          <small>Phone</small><strong></strong>
+        </a>
+        <a class="info-card" href="#" data-contact="email" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></span>
+          <small>Email</small><strong></strong>
+        </a>
+        <a class="info-card" href="#" data-contact="whatsapp" data-reveal>
+          <span class="ico" data-icon="whatsapp" style="padding:12px"></span>
+          <small>WhatsApp</small><strong></strong>
+        </a>
+        <div class="info-card" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <small>Visit / hours</small>
+          <span data-contact="address" style="font-weight:700"></span>
+          <span data-contact="hours" style="color:var(--muted)"></span>
+        </div>
+      </div>
+
+      <div class="contact-card" id="contact">
+        <div class="intro">
+          <span class="eyebrow" style="color:var(--ink)">Free quote</span>
+          <h2>Tell us about your project</h2>
+          <p>The more you tell us, the more accurate your quote. Links to example videos you like are always helpful.</p>
+          <ul class="perks">
+            <li>Free quote within one working day</li>
+            <li>Two rounds of revisions included</li>
+            <li>No obligation, no spam</li>
+          </ul>
+        </div>
+
+        <!-- Contact form. Delivery is set in script.js → CONFIG.formEndpoint -->
+        <form class="lead-form" id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+              <span class="err" id="e-email">Please enter a valid email.</span>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="f-service">Service</label>
+              <select id="f-service" name="service" data-services required aria-describedby="e-service"></select>
+              <span class="err" id="e-service">Please choose a service.</span>
+            </div>
+            <div class="field full">
+              <label for="f-budget">Budget <span class="opt">(optional)</span></label>
+              <select id="f-budget" name="budget" data-budgets></select>
+            </div>
+            <div class="field full">
+              <label for="f-details">Project details</label>
+              <textarea id="f-details" name="details" placeholder="What kind of video is it, how long, and when do you need it?"></textarea>
+            </div>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          </div>
+          <button type="submit" class="btn btn-dark">Send my request <span class="arrow">→</span></button>
+          <p class="form-error" role="alert"></p>
+          <p class="form-note">We reply within one working day. Your details are never shared.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+</body>
+</html>

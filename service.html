@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ===== SEO =====
+     This is the template for every single-service page.
+     The title, description and text are filled in from SERVICE_PAGES in script.js.
+     Open a service with: service.html?s=SERVICE-SLUG -->
+<title>Service | AdSource</title>
+<meta name="description" content="Video editing, motion graphics, AI video editing and digital marketing services from AdSource.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AdSource">
+<meta property="og:title" content="AdSource Services">
+<meta property="og:description" content="Video editing, motion graphics, AI video editing and digital marketing.">
+<meta property="og:image" content="images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#CCF140">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("asZoom")){sessionStorage.removeItem("asZoom");if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("as-arriving")}}catch(e){}</script>
+<script src="script.js" defer></script>
+</head>
+<body data-page="services">
+
+<header id="site-header"></header>
+
+<main id="main">
+  <div id="service-page">
+
+    <section class="page-hero sv-hero">
+      <div class="wrap">
+        <a class="back" href="services.html">← All services</a>
+        <div class="sv-title-row">
+          <span class="ico sv-ico" id="sv-ico"></span>
+          <h1 id="sv-title">Service</h1>
+        </div>
+        <p id="sv-tagline"></p>
+        <div class="sv-actions">
+          <a class="btn btn-dark" data-sv-ask href="contact.html">Ask about this <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" data-wa-link href="#">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap sv-main">
+        <div>
+          <p class="sv-intro" id="sv-intro" data-reveal></p>
+          <h2 class="sv-h2">What's included</h2>
+          <ul class="checks sv-includes" id="sv-includes"></ul>
+        </div>
+        <aside class="sv-side" data-reveal>
+          <div class="glance">
+            <h2>At a glance</h2>
+            <dl id="sv-glance"></dl>
+            <div class="best"><strong>Best for</strong><span id="sv-best"></span></div>
+            <a class="btn btn-dark" data-sv-ask href="contact.html">Get a free quote <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" data-wa-link href="#">Chat on WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="block" style="background:var(--white)">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">How it works</span><h2>Four simple steps</h2></div>
+        </div>
+        <div class="steps" id="sv-steps"></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap faq-wrap">
+        <div data-reveal>
+          <span class="eyebrow">FAQ</span>
+          <h2>Common questions</h2>
+          <p style="color:var(--muted);margin:18px 0 26px;font-size:1.08rem">Have another question? We're happy to help.</p>
+          <a class="btn btn-dark" data-sv-ask href="contact.html">Ask us</a>
+        </div>
+        <div class="faq" id="sv-faq"></div>
+      </div>
+    </section>
+
+    <section class="block" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">More services</span><h2>Explore other services</h2></div>
+          <a href="services.html" class="btn btn-ghost">All services <span class="arrow">→</span></a>
+        </div>
+        <div class="svc-mini-grid sv-others" id="sv-others"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta-band" data-reveal>
+          <h2>Ready to get started?</h2>
+          <p>Tell us about your project and we'll send a free quote within one working day.</p>
+          <div class="actions">
+            <a class="btn btn-lime" data-sv-ask href="contact.html">Get a free quote <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" data-wa-link href="#">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+</body>
+</html>

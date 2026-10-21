@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ===== SEO =====
+     This is the article template. The title, description and social preview
+     are filled in automatically from BLOG_POSTS in script.js.
+     Open an article with: blog-post.html?post=ARTICLE-SLUG -->
+<title>Article | AdSource Blog</title>
+<meta name="description" content="Video editing and social media tips from the AdSource team.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AdSource">
+<meta property="og:title" content="AdSource Blog">
+<meta property="og:description" content="Video editing and social media tips from the AdSource team.">
+<meta property="og:url" content="">
+<meta property="og:image" content="images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#CCF140">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("asZoom")){sessionStorage.removeItem("asZoom");if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("as-arriving")}}catch(e){}</script>
+<script src="script.js" defer></script>
+</head>
+<body data-page="blog">
+
+<header id="site-header"></header>
+
+<main id="main">
+  <div id="article">
+
+    <section class="article-hero">
+      <div class="wrap">
+        <a class="back" href="blog.html">← All articles</a>
+        <div><span class="tag" id="a-category">Blog</span></div>
+        <h1 id="a-title">Loading article…</h1>
+        <div class="post-meta">
+          <span class="author"><img src="images/logo-icon.png" alt="" width="256" height="256"><span id="a-author">AdSource Team</span></span>
+          <span class="dot"></span><time id="a-date"></time>
+          <span class="dot"></span><span id="a-read"></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="article-cover"><img id="a-cover" src="images/blog/cover-01.svg" alt="" width="1200" height="675"></div>
+
+      <div class="article-layout">
+        <aside>
+          <nav class="toc" aria-labelledby="toc-title">
+            <h2 id="toc-title">On this page</h2>
+            <ol id="toc-list"></ol>
+            <div class="share">
+              <h2>Share</h2>
+              <div class="share-btns" id="share-btns"></div>
+            </div>
+          </nav>
+        </aside>
+
+        <article>
+          <div class="prose" id="a-body"></div>
+          <div class="article-cta">
+            <div>
+              <h2>Need help with your videos?</h2>
+              <p>We edit, animate and grow — so you can focus on creating.</p>
+            </div>
+            <a href="contact.html" class="btn btn-lime">Get a free quote <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <section class="block-tight">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">Keep reading</span><h2>Related posts</h2></div>
+          <a href="blog.html" class="btn btn-ghost">All articles <span class="arrow">→</span></a>
+        </div>
+        <div class="post-grid" id="related-posts"></div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+</body>
+</html>
