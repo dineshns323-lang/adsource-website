@@ -127,7 +127,7 @@
     </div>
   </section>
 
-  <!-- ================= INSIDE THE EDIT: exploded-layers animation (driven by script.js) ================= -->
+  <!-- ================= INSIDE THE EDIT: editing-timeline animation (driven by script.js) ================= -->
   <section class="block" style="background:var(--white)">
     <div class="wrap ba-wrap">
       <div data-reveal>
@@ -143,82 +143,56 @@
         </ul>
       </div>
 
-      <!-- TEXT YOU CAN CHANGE: file name, layer names, subtitle words and lower-third name -->
-      <div class="lx" id="editor" data-state="raw" role="img" aria-label="Animation: raw footage splits into the layers of an edit — colour grade, audio, subtitles and branding — then comes back together as the finished video" data-reveal>
-        <div class="lx-hud">
-          <span class="lx-status"><s></s><span class="lx-st">Raw footage</span></span>
-          <span class="lx-file">your_video.mp4</span>
+      <!-- TEXT YOU CAN CHANGE: file name, track names, subtitle words and lower-third name -->
+      <div class="ed" id="editor" data-step="0" role="img" aria-label="Animation: a playhead moves along an editing timeline, adding colour grading, clean audio, subtitles and branding to the video, then exports it ready to post" data-reveal>
+        <div class="ed-hud">
+          <span class="ed-status"><s></s><span class="ed-st">Raw footage</span></span>
+          <span class="ed-file">your_video.mp4</span>
         </div>
 
-        <div class="lx-stage">
-          <div class="lx-shadow"></div>
-          <div class="lx-iso">
-
-            <!-- Layer 0: raw footage -->
-            <div class="lx-layer lx-footage" data-layer="0" style="--i:0">
-              <svg class="lx-scene" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs><linearGradient id="lxSkyRaw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#77757B"/><stop offset="1" stop-color="#A9A6A0"/></linearGradient></defs>
-                <rect width="320" height="180" fill="url(#lxSkyRaw)"/>
-                <circle cx="214" cy="80" r="22" fill="#D8D5CE"/>
-                <path d="M0 118 C40 94 80 102 120 112 S200 90 240 102 S300 96 320 102 V180 H0Z" fill="#8A878C"/>
-                <path d="M0 140 C50 120 100 128 150 136 S240 120 320 132 V180 H0Z" fill="#6C6A70"/>
-                <path d="M0 160 C60 146 120 152 180 158 S270 148 320 154 V180 H0Z" fill="#4B4A50"/>
-                <path d="M60 56q5-4 10 0q5-4 10 0M92 46q4-3 8 0q4-3 8 0" fill="none" stroke="rgba(40,30,60,.5)" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-              <span class="lx-rec"><i></i>REC</span>
-              <span class="lx-tag">Raw footage</span>
-            </div>
-
-            <!-- Layer 1: colour grade -->
-            <div class="lx-layer lx-colour" data-layer="1" style="--i:1">
-              <div class="lx-wheels"><i></i><i></i><i></i></div>
-              <span class="lx-tag"><b>01</b> Colour grade</span>
-            </div>
-
-            <!-- Layer 2: audio -->
-            <div class="lx-layer lx-audio" data-layer="2" style="--i:2">
-              <div class="lx-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <span class="lx-tag"><b>02</b> Audio</span>
-            </div>
-
-            <!-- Layer 3: subtitles -->
-            <div class="lx-layer lx-subs" data-layer="3" style="--i:3">
-              <div class="lx-sub">edits that <em>keep</em> people watching</div>
-              <span class="lx-tag"><b>03</b> Subtitles</span>
-            </div>
-
-            <!-- Layer 4: branding -->
-            <div class="lx-layer lx-brand" data-layer="4" style="--i:4">
-              <div class="lx-lt"><strong>YOUR CHANNEL</strong><small>Episode 12 · Travel vlog</small></div>
-              <img class="lx-bug" src="images/logo-icon.png" alt="" width="256" height="256">
-              <span class="lx-tag"><b>04</b> Branding</span>
-            </div>
-
-            <!-- Final: all layers combined -->
-            <div class="lx-layer lx-final" style="--i:5">
-              <svg class="lx-scene" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <linearGradient id="lxSkyGrade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#251C5A"/><stop offset="1" stop-color="#FF9F73"/></linearGradient>
-                  <radialGradient id="lxSunGlow"><stop offset="0" stop-color="rgba(255,226,160,.7)"/><stop offset="1" stop-color="rgba(255,226,160,0)"/></radialGradient>
-                </defs>
-                <rect width="320" height="180" fill="url(#lxSkyGrade)"/>
-                <circle cx="214" cy="80" r="70" fill="url(#lxSunGlow)"/>
-                <circle cx="214" cy="80" r="22" fill="#FFE9A8"/>
-                <path d="M0 118 C40 94 80 102 120 112 S200 90 240 102 S300 96 320 102 V180 H0Z" fill="#7B66E0"/>
-                <path d="M0 140 C50 120 100 128 150 136 S240 120 320 132 V180 H0Z" fill="#4A3C9A"/>
-                <path d="M0 160 C60 146 120 152 180 158 S270 148 320 154 V180 H0Z" fill="#1D1838"/>
-                <path d="M60 56q5-4 10 0q5-4 10 0M92 46q4-3 8 0q4-3 8 0" fill="none" stroke="rgba(40,30,60,.6)" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-              <div class="lx-lt"><strong>YOUR CHANNEL</strong><small>Episode 12 · Travel vlog</small></div>
-              <img class="lx-bug" src="images/logo-icon.png" alt="" width="256" height="256">
-              <div class="lx-sub">edits that <em>keep</em> people watching</div>
-            </div>
-
-          </div>
-          <span class="lx-ready">Ready to post ✓</span>
+        <!-- Preview monitor -->
+        <div class="ed-monitor">
+          <svg class="ed-scene ed-raw" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="edSkyRaw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#77757B"/><stop offset="1" stop-color="#A9A6A0"/></linearGradient></defs>
+            <rect width="320" height="180" fill="url(#edSkyRaw)"/>
+            <circle cx="214" cy="80" r="22" fill="#D8D5CE"/>
+            <path d="M0 118 C40 94 80 102 120 112 S200 90 240 102 S300 96 320 102 V180 H0Z" fill="#8A878C"/>
+            <path d="M0 140 C50 120 100 128 150 136 S240 120 320 132 V180 H0Z" fill="#6C6A70"/>
+            <path d="M0 160 C60 146 120 152 180 158 S270 148 320 154 V180 H0Z" fill="#4B4A50"/>
+            <path d="M60 56q5-4 10 0q5-4 10 0M92 46q4-3 8 0q4-3 8 0" fill="none" stroke="rgba(40,30,60,.5)" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <svg class="ed-scene ed-grade" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="edSkyGrade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#251C5A"/><stop offset="1" stop-color="#FF9F73"/></linearGradient>
+              <radialGradient id="edSunGlow"><stop offset="0" stop-color="rgba(255,226,160,.7)"/><stop offset="1" stop-color="rgba(255,226,160,0)"/></radialGradient>
+            </defs>
+            <rect width="320" height="180" fill="url(#edSkyGrade)"/>
+            <circle cx="214" cy="80" r="70" fill="url(#edSunGlow)"/>
+            <circle cx="214" cy="80" r="22" fill="#FFE9A8"/>
+            <path d="M0 118 C40 94 80 102 120 112 S200 90 240 102 S300 96 320 102 V180 H0Z" fill="#7B66E0"/>
+            <path d="M0 140 C50 120 100 128 150 136 S240 120 320 132 V180 H0Z" fill="#4A3C9A"/>
+            <path d="M0 160 C60 146 120 152 180 158 S270 148 320 154 V180 H0Z" fill="#1D1838"/>
+            <path d="M60 56q5-4 10 0q5-4 10 0M92 46q4-3 8 0q4-3 8 0" fill="none" stroke="rgba(40,30,60,.6)" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="ed-wipe"></span>
+          <span class="ed-rec"><i></i>REC</span>
+          <div class="ed-meter"><i></i><i></i></div>
+          <div class="ed-lt"><strong>YOUR CHANNEL</strong><small>Episode 12 · Travel vlog</small></div>
+          <img class="ed-bug" src="images/logo-icon.png" alt="" width="256" height="256">
+          <div class="ed-sub"><span style="--w:0">edits</span> <span style="--w:1">that</span> <em style="--w:2">keep</em> <span style="--w:3">people</span> <span style="--w:4">watching</span></div>
+          <span class="ed-ready">Ready to post ✓</span>
         </div>
 
-        <div class="lx-steps"><span>Colour</span><span>Audio</span><span>Subtitles</span><span>Branding</span><span>Ready</span></div>
+        <!-- Timeline: data-k matches data-ed-step in the checklist -->
+        <div class="ed-tl">
+          <div class="ed-row ed-head"><span class="ed-tc">00:00:00:00</span><div class="ed-ruler"></div></div>
+          <div class="ed-row" data-k="1"><span class="ed-lab">Colour</span><div class="ed-lane"><span class="ed-clip c1"><i></i><b>Grade</b></span></div></div>
+          <div class="ed-row" data-k="2"><span class="ed-lab">Audio</span><div class="ed-lane"><span class="ed-clip c2"><i></i><b>Mix</b></span></div></div>
+          <div class="ed-row" data-k="3"><span class="ed-lab">Subtitles</span><div class="ed-lane"><span class="ed-clip c3"><i></i><b>Aa</b></span></div></div>
+          <div class="ed-row" data-k="4"><span class="ed-lab">Branding</span><div class="ed-lane"><span class="ed-clip c4"><i></i><b>Logo</b></span></div></div>
+          <div class="ed-row ed-video"><span class="ed-lab">Video</span><div class="ed-lane"><span class="ed-clip c5"><i></i><b>your_video.mp4</b></span></div></div>
+          <div class="ed-ph"></div>
+        </div>
       </div>
     </div>
   </section>

@@ -1000,48 +1000,62 @@ const BRAND_ICONS = {
     }
   }
 
-  /* ---------------- "Inside the edit" exploded layers (home) ----------------
-     Steps through: raw footage → layers float apart → each layer lights up
-     (colour, audio, subtitles, branding) → layers snap together as the
-     finished frame. All motion is CSS; this only switches states.
-     Hovering, tapping or focusing a checklist line shows that layer. */
-  const lx = $("#editor.lx");
-  if (lx) (function () {
-    const box = lx.closest(".ba-wrap");
-    const layers = $$(".lx-layer[data-layer]", lx), chips = $$(".lx-steps span", lx), st = $(".lx-st", lx);
+  /* ---------------- "Inside the edit" timeline (home) ----------------
+     A playhead runs along an editing timeline; each clip it crosses is
+     applied to the preview (colour, audio, subtitles, branding), then the
+     video exports. All motion is CSS; this only switches steps and runs
+     the timecode. Hovering, tapping or focusing a checklist line jumps there. */
+  const ed = $("#editor.ed");
+  if (ed) (function () {
+    const box = ed.closest(".ba-wrap");
+    const rows = $$(".ed-row[data-k]", ed), st = $(".ed-st", ed), tc = $(".ed-tc", ed);
     const items = $$("[data-ed-step]", box);
     // EDIT the status text here if you like
     const PHASES = [
-      { state: "raw", active: 0, ms: 2000, label: "Raw footage", step: -1 },
-      { state: "exploded", active: 0, ms: 1500, label: "Splitting into layers", step: -1 },
-      { state: "exploded", active: 1, ms: 1900, label: "Colour grading", step: 0 },
-      { state: "exploded", active: 2, ms: 1900, label: "Cleaning audio", step: 1 },
-      { state: "exploded", active: 3, ms: 1900, label: "Adding subtitles", step: 2 },
-      { state: "exploded", active: 4, ms: 1900, label: "Adding branding", step: 3 },
-      { state: "done", active: 0, ms: 3600, label: "Ready to post ✓", step: 4 },
+      { ms: 1800, label: "Raw footage" },
+      { ms: 2300, label: "Colour grading" },
+      { ms: 2300, label: "Cleaning audio" },
+      { ms: 2400, label: "Adding subtitles" },
+      { ms: 2300, label: "Adding branding" },
+      { ms: 3800, label: "Ready to post ✓" },
     ];
-    let idx = 0, timer = null, visible = false, held = false;
+    const LENGTH = 30, FPS = 25; // timeline length in seconds, for the timecode
+    let idx = 0, timer = null, visible = false, held = false, tcNow = 0, tcRaf = 0;
 
-    const show = p => {
-      lx.dataset.state = p.state;
-      lx.classList.toggle("has-active", p.active > 0);
-      layers.forEach(l => l.classList.toggle("is-active", +l.dataset.layer === p.active && p.active > 0));
-      st.textContent = p.label;
-      chips.forEach((c, i) => { c.classList.toggle("on", i === p.step); c.classList.toggle("ok", p.step > i); });
-      box.classList.toggle("lx-focus", p.active > 0);
-      items.forEach(li => li.classList.toggle("lx-on", +li.dataset.edStep === p.active));
+    const pad = n => String(n).padStart(2, "0");
+    const fmt = s => { const f = Math.round(s * FPS); return `00:${pad(Math.floor(f / FPS / 60))}:${pad(Math.floor(f / FPS) % 60)}:${pad(f % FPS)}`; };
+    const tween = (to, ms) => {
+      cancelAnimationFrame(tcRaf);
+      const from = tcNow, t0 = performance.now();
+      const tick = now => {
+        const k = ms ? Math.min(1, Math.max(0, (now - t0) / ms)) : 1;
+        tcNow = from + (to - from) * k; tc.textContent = fmt(tcNow);
+        if (k < 1) tcRaf = requestAnimationFrame(tick);
+      };
+      tick(t0);
+    };
+
+    const show = (n, jump) => {
+      ed.dataset.step = n;
+      ed.classList.toggle("jump", !!jump);
+      for (let k = 1; k <= 5; k++) ed.classList.toggle("s" + k, k <= n);
+      rows.forEach(r => r.classList.toggle("on", +r.dataset.k === n));
+      st.textContent = PHASES[n].label;
+      box.classList.toggle("lx-focus", n >= 1 && n <= 4);
+      items.forEach(li => li.classList.toggle("lx-on", +li.dataset.edStep === n));
+      tween(Math.min(n, 4) / 4 * LENGTH, reduceMotion ? 0 : jump ? 450 : n === 0 ? 500 : 1600);
     };
     const stop = () => { clearTimeout(timer); timer = null; };
     const run = () => {
       stop();
       if (!visible || held || reduceMotion) return;
-      show(PHASES[idx]);
+      show(idx);
       timer = setTimeout(() => { idx = (idx + 1) % PHASES.length; run(); }, PHASES[idx].ms);
     };
 
-    // Checklist: hover / tap / keyboard focus shows that layer
-    const hold = n => { held = true; stop(); idx = n + 1; show(PHASES[idx]); };
-    const release = () => { if (!held) return; held = false; if (reduceMotion) show(still); else run(); };
+    // Checklist: hover / tap / keyboard focus jumps to that step
+    const hold = n => { held = true; stop(); idx = n; show(n, true); };
+    const release = () => { if (!held) return; held = false; if (reduceMotion) show(5); else run(); };
     items.forEach(li => {
       const n = +li.dataset.edStep;
       li.addEventListener("pointerenter", () => hold(n));
@@ -1050,12 +1064,11 @@ const BRAND_ICONS = {
       li.addEventListener("blur", release);
     });
 
-    // Reduced motion: a still, exploded view; hovering still highlights layers
-    const still = { state: "exploded", active: 0, label: "Inside the edit", step: -1 };
-    if (reduceMotion) { show(still); return; }
+    // Reduced motion: show the finished edit; hovering still jumps between steps
+    if (reduceMotion) { show(5); return; }
 
     if ("IntersectionObserver" in window) {
-      new IntersectionObserver(([en]) => { visible = en.isIntersecting; visible ? run() : stop(); }, { threshold: .25 }).observe(lx);
+      new IntersectionObserver(([en]) => { visible = en.isIntersecting; visible ? run() : stop(); }, { threshold: .25 }).observe(ed);
     } else { visible = true; run(); }
   })();
 
