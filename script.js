@@ -3,7 +3,7 @@
    ---------------------------------------------------------------------
    The parts you are most likely to edit are at the TOP of this file:
 
-     1. CONFIG ........ phone, email, WhatsApp, address, social links,
+     1. CONFIG ........ phone, email, WhatsApp, social links,
                         contact-form delivery, budget options
      2. SERVICES ...... service names used in menus, footer and forms
      3. BLOG_POSTS .... your blog articles
@@ -19,18 +19,16 @@
    ===================================================================== */
 const CONFIG = {
   businessName: "AdSource",
-  tagline: "Video editing, motion graphics and AI video for creators and brands.",
+  tagline: "Video editing, UGC ads and AI video for creators and brands.",
 
-  phone: "[YOUR PHONE NUMBER]",                              // e.g. "+91 98765 43210"
-  email: "[YOUR EMAIL]",                                     // e.g. "hello@adsource.in"
-  whatsapp: "[YOUR WHATSAPP NUMBER WITH COUNTRY CODE]",      // digits only, e.g. "919876543210"
+  phone: "+91 79048 57282",                                  // e.g. "+91 98765 43210"
+  email: "adsource.business@gmail.com",                      // e.g. "hello@adsource.in"
+  whatsapp: "+91 79048 57282",                               // with country code; spaces are fine (the link strips them)
   whatsappMessage: "Hi AdSource! I'd like to talk about a video project.",
-  address: "[YOUR CITY / ADDRESS]",                          // e.g. "Kochi, Kerala, India"
-  hours: "[e.g. Mon–Sat, 10 AM – 7 PM]",                     // e.g. "Mon–Sat, 10 AM – 7 PM"
 
   // Your social media profile links
   socials: {
-    instagram: "https://instagram.com/[YOUR-INSTAGRAM]",
+    instagram: "https://www.instagram.com/adsource.in/",
     youtube: "https://youtube.com/@[YOUR-CHANNEL]",
     facebook: "https://facebook.com/[YOUR-PAGE]",
     linkedin: "https://linkedin.com/company/[YOUR-COMPANY]",
@@ -66,7 +64,7 @@ const CONFIG = {
    ===================================================================== */
 const SERVICES = [
   { slug: "youtube-editing", name: "YouTube Video Editing" },
-  { slug: "motion-graphics", name: "Motion Graphics" },
+  { slug: "ugc-ads", name: "UGC Ads" },
   { slug: "ai-video-editing", name: "AI Video Editing" },
   { slug: "short-form-video", name: "Short-Form Video (Reels, Shorts, TikTok)" },
   { slug: "social-media-ads", name: "Social Media Ads (Meta & Instagram)" },
@@ -99,16 +97,16 @@ const SERVICE_PAGES = {
     glance: [["Formats", "16:9 long-form, 4K or 1080p"], ["Delivery", "MP4 + thumbnail (PNG/JPG)"], ["Revisions", "Included with every video"]],
     faqs: [["How long does an edit take?", "It depends on the video length and style. We agree on a delivery date before we start, and regular clients get a fixed weekly schedule."], ["Can you match my current editing style?", "Yes. Share a few videos you like and we’ll follow the same style, fonts and pacing."], ["Do you upload to my channel?", "We can deliver the files to you, or upload and schedule them with titles and descriptions if you give us access."]],
   },
-  "motion-graphics": {
-    title: "Motion Graphics",
-    tagline: "Animation that makes your brand look polished and memorable.",
-    intro: "From animated logos to full explainer videos, we use motion design to make your message clearer and your brand stand out. Every animation is made in your colours, fonts and style.",
-    icon: '<circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="7" r="2.5"/><path d="M8 15.5C11 13 13 11 16 8.5"/>',
-    includes: ["Animated logo intros and outros", "Kinetic titles and text animation", "Lower thirds and name tags", "Explainer and product animations", "Animated social media ads", "Icon and infographic animation", "Transitions and brand packs for editors", "Animated GIFs and stickers"],
-    steps: [["Brief", "Tell us your goal, message and where the animation will be used."], ["Storyboard", "We plan the scenes and style so you can approve the idea first."], ["Animate", "We design and animate every frame with smooth timing and sound."], ["Deliver", "Get your files in every size you need for web and social."]],
-    bestFor: "Brands, startups, YouTubers, agencies and businesses launching a product or campaign.",
-    glance: [["Formats", "16:9, 9:16, 1:1 and 4:5"], ["Delivery", "MP4, MOV with transparency, GIF"], ["Style", "Made in your brand colours and fonts"]],
-    faqs: [["Do I need a script or storyboard?", "No. Share your idea and we’ll write the script and storyboard with you."], ["Can I get a transparent background?", "Yes. Logos, lower thirds and titles can be delivered with transparency to use in any video."], ["Can you animate my existing logo?", "Yes. Send us the logo file (AI, SVG or PDF works best) and we’ll bring it to life."]],
+  "ugc-ads": {
+    title: "UGC Ads",
+    tagline: "Real people, real reactions — ads that feel like content, not commercials.",
+    intro: "UGC (user-generated content) ads use real creators talking about your product in their own words, filmed on a phone the way people actually post. They build trust fast and often outperform polished studio ads on Instagram, Facebook, YouTube Shorts and TikTok. We handle the script, creators and edit — you get scroll-stopping ads ready to run.",
+    icon: '<rect x="6" y="2" width="12" height="20" rx="3"/><circle cx="12" cy="10" r="2.5"/><path d="M8.5 17c.8-1.8 2-2.7 3.5-2.7s2.7.9 3.5 2.7"/>',
+    includes: ["Ad scripts with strong hooks", "Matching you with the right UGC creators", "Product demos, unboxings and reviews", "Testimonial and problem–solution ads", "Multiple hook variations for testing", "Captions, music and on-screen text", "Vertical edits for Reels, Shorts and TikTok", "Raw footage and edited ads delivered"],
+    steps: [["Brief", "Tell us about your product, audience and what you want the ad to achieve."], ["Script & creators", "We write the hooks and script and pick creators who fit your brand."], ["Film & edit", "Creators film the content and our editors turn it into scroll-stopping ads."], ["Deliver", "Get ready-to-run ads with hook variations for testing."]],
+    bestFor: "D2C brands, e-commerce stores, apps, restaurants and local businesses running paid social ads.",
+    glance: [["Formats", "9:16 vertical, plus 1:1 and 4:5"], ["Platforms", "Instagram, Facebook, YouTube Shorts, TikTok"], ["Testing", "Multiple hooks per ad"]],
+    faqs: [["What is a UGC ad?", "A short video ad made by a real person, filmed in a natural, phone-shot style. It looks like a normal post, so people trust it and watch it."], ["Do I need to send my product to the creator?", "Yes, for most product ads we ship it to the creator so they can show it on camera. For services and apps, they can record using your website or app."], ["Can I use the ads on any platform?", "Yes. We deliver vertical and square versions so you can run them on Instagram, Facebook, YouTube and TikTok."]],
   },
   "ai-video-editing": {
     title: "AI Video Editing",
@@ -174,7 +172,7 @@ const SERVICE_PAGES = {
    ===================================================================== */
 const SERVICE_GOALS = [
   { label: "Grow my YouTube channel", services: ["youtube-editing", "short-form-video"] },
-  { label: "Look more professional", services: ["motion-graphics", "youtube-editing"] },
+  { label: "Look more professional", services: ["ugc-ads", "youtube-editing"] },
   { label: "Post more, faster", services: ["ai-video-editing", "short-form-video", "social-media-management"] },
   { label: "Get more local customers", services: ["social-media-ads", "social-media-management", "short-form-video"] },
   { label: "Sell more online", services: ["ecommerce-ads", "social-media-ads"] },
@@ -189,7 +187,7 @@ const SERVICE_GOALS = [
    <p> paragraph, <h2> section heading (appears in the table of
    contents), <ul><li> bullet list, <blockquote> highlighted note.
    The post opens at: blog-post.html?post=YOUR-SLUG
-   "preview" picks the animated card cover: "youtube", "motion", "ai",
+   "preview" picks the animated card cover: "youtube", "ugc", "motion", "ai",
    "short", "meta" or "thumb". Set preview: "" to show the cover image
    instead (do this when you use your own cover photo).
    Newest date shows first.
@@ -241,48 +239,51 @@ const BLOG_POSTS = [
 `,
   },
   {
-    slug: "motion-graphics-why-every-brand-video-needs-them",
-    title: "Motion graphics: why every brand video needs them",
-    category: "Motion Graphics",
+    slug: "ugc-ads-why-real-people-sell-better",
+    title: "UGC ads: why real people sell better than polished ads",
+    category: "UGC Ads",
     date: "2026-10-07",
     author: "AdSource Team",
     cover: "images/blog/cover-02.svg",
-    preview: "motion",
-    excerpt: "From animated logos to on-screen text, motion graphics make videos clearer, more memorable and unmistakably yours.",
+    preview: "ugc",
+    excerpt: "Phone-shot videos from real customers and creators often beat studio ads. Here's why UGC works, and how to make UGC ads that convert.",
     content: `
-<p class="lede">Motion graphics are animated text, shapes, icons and illustrations added to video. Used well, they make a video easier to understand, more polished and instantly recognisable as your brand.</p>
+<p class="lede">UGC (user-generated content) ads are short videos that look like they were made by a real customer: filmed on a phone, talking straight to camera, showing the product in everyday life. They don't look like ads, and that's exactly why they work.</p>
 
-<h2>They explain things faster</h2>
-<p>Some ideas are hard to film — a process, a data point, how an app works, or how a service fits together. A 10-second animation can explain what would take a minute of talking. That's why explainer videos rely so heavily on motion design.</p>
-
-<h2>They hold attention</h2>
-<p>Movement draws the eye. Animated titles, highlighted keywords and kinetic captions give viewers something to follow, which is especially useful on social media where people scroll quickly and often watch without sound.</p>
-
-<h2>They build brand recognition</h2>
-<p>When every video uses the same colours, fonts, logo animation and transition style, your audience starts to recognise you before they even read your name. A consistent motion "toolkit" usually includes:</p>
+<h2>Why UGC ads work</h2>
+<p>People trust people more than brands. When a real person shares an honest experience, viewers see proof instead of a sales pitch. UGC also blends into the feed on Instagram, TikTok and YouTube Shorts, so people watch it instead of scrolling past.</p>
 <ul>
-  <li>an animated logo (intro and outro versions)</li>
-  <li>title and subtitle styles</li>
-  <li>lower thirds for names and job titles</li>
-  <li>branded transitions</li>
-  <li>call-to-action end cards</li>
+  <li><strong>Trust:</strong> real faces and honest reviews feel believable.</li>
+  <li><strong>Native feel:</strong> it looks like content, not an advert.</li>
+  <li><strong>Lower cost:</strong> no big shoot, so you can test many versions.</li>
+  <li><strong>Faster testing:</strong> new hooks and angles can go live in days.</li>
 </ul>
 
-<h2>They make videos look professional</h2>
-<p>Clean typography and smooth animation separate a polished brand video from a rough recording. Even simple touches — a well-timed title or a tidy lower third — raise the perceived quality of the whole video.</p>
-
-<h2>Where to use motion graphics</h2>
+<h2>The anatomy of a winning UGC ad</h2>
 <ul>
-  <li><strong>YouTube videos:</strong> chapter titles, stats, callouts and subscribe reminders.</li>
-  <li><strong>Ads:</strong> product benefits, prices and offers that stand out in the first seconds.</li>
-  <li><strong>Reels and Shorts:</strong> animated captions and quick text hooks.</li>
-  <li><strong>Presentations and websites:</strong> short looping animations that explain a product.</li>
+  <li><strong>Hook (0–3 seconds):</strong> a relatable problem, a bold claim or a surprising moment.</li>
+  <li><strong>Problem:</strong> the frustration your customer feels before finding you.</li>
+  <li><strong>Product in action:</strong> show it being used, not just held up to the camera.</li>
+  <li><strong>Result:</strong> the before/after, the feeling, the benefit.</li>
+  <li><strong>Call to action:</strong> one clear next step, such as "tap Shop now".</li>
 </ul>
 
-<h2>Keep it simple</h2>
-<p>The best motion graphics support the message — they don't steal the show. Use your brand colours, keep text short, give each animation enough time to be read, and stay consistent across videos.</p>
+<h2>Popular UGC formats</h2>
+<ul>
+  <li><strong>Testimonial:</strong> a customer explains why they love the product.</li>
+  <li><strong>Unboxing:</strong> first impressions as the product is opened.</li>
+  <li><strong>Demo or tutorial:</strong> "here's how I use it every day".</li>
+  <li><strong>Problem/solution:</strong> "I tried everything until I found this".</li>
+  <li><strong>Reaction or comparison:</strong> side-by-side with an alternative.</li>
+</ul>
 
-<div class="tip-box"><strong>Quick win:</strong> start with an animated logo and a set of branded lower thirds. You'll use them in every video, and they instantly make your content look more professional.</div>
+<h2>The edit still matters</h2>
+<p>UGC should look natural, not careless. Good editing tightens the pacing, adds captions for silent viewers, highlights key words on screen and cuts several hook variations from the same footage. One creator video can become five or more ads to test.</p>
+
+<h2>Test hooks, then scale</h2>
+<p>Run several hooks against the same body of the video and let the data choose. Keep the winners running, refresh creative when results slow down, and bring in new creators regularly so your ads never feel stale.</p>
+
+<div class="tip-box"><strong>Quick win:</strong> ask three happy customers for a 30-second phone video answering "what problem did this solve for you?", then edit each into a few hook variations.</div>
 `,
   },
   {
@@ -592,8 +593,6 @@ const BRAND_ICONS = {
               <li>${UI.phone}<a href="tel:${CONFIG.phone.replace(/[^\d+]/g, "")}">${esc(CONFIG.phone)}</a></li>
               <li>${UI.mail}<a href="mailto:${CONFIG.email}">${esc(CONFIG.email)}</a></li>
               <li>${stroke('<path d="M4 20l1.3-4A8 8 0 1 1 8.5 19z"/>')}<a href="${waLink()}" target="_blank" rel="noopener">WhatsApp: ${esc(CONFIG.whatsapp)}</a></li>
-              <li>${UI.pin}<span>${esc(CONFIG.address)}</span></li>
-              <li>${UI.clock}<span>${esc(CONFIG.hours)}</span></li>
             </ul>
           </div>
         </div>
@@ -721,8 +720,8 @@ const BRAND_ICONS = {
   const PV = (function () {
     const INK = "#17151F", INK2 = "#221F2D", LIME = "#CCF140", LILAC = "#B8A6FF", WHITE = "#FFFFFF";
     const LOOP = 8;
-    const LABEL = { youtube: "YouTube", motion: "Motion", ai: "AI tools", short: "Short-form", meta: "Meta ads", thumb: "Thumbnails" };
-    const LABEL_COLOR = { youtube: LIME, motion: INK, ai: LILAC, short: INK, meta: INK, thumb: LILAC };
+    const LABEL = { youtube: "YouTube", ugc: "UGC ads", motion: "Motion", ai: "AI tools", short: "Short-form", meta: "Meta ads", thumb: "Thumbnails" };
+    const LABEL_COLOR = { youtube: LIME, ugc: INK, motion: INK, ai: LILAC, short: INK, meta: INK, thumb: LILAC };
     const ease = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 
     function rr(c, x, y, w, h, r) {
@@ -734,6 +733,18 @@ const BRAND_ICONS = {
       c.save(); c.translate(x, y); c.rotate(rot); c.beginPath();
       for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, d = i % 2 ? r * .28 : r; c.lineTo(Math.cos(a) * d, Math.sin(a) * d); }
       c.closePath(); c.fill(); c.restore();
+    }
+
+    function star5(c, x, y, r) {
+      c.beginPath();
+      for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, d = i % 2 ? r * .45 : r; c.lineTo(x + Math.cos(a) * d, y + Math.sin(a) * d); }
+      c.closePath(); c.fill();
+    }
+    function heart(c, x, y, s) {
+      c.beginPath(); c.moveTo(x, y + s * .9);
+      c.bezierCurveTo(x - s * 1.4, y, x - s * .6, y - s * 1.1, x, y - s * .35);
+      c.bezierCurveTo(x + s * .6, y - s * 1.1, x + s * 1.4, y, x, y + s * .9);
+      c.fill();
     }
 
     const SCENES = {
@@ -756,6 +767,41 @@ const BRAND_ICONS = {
         });
         c.globalAlpha = 1;
         c.fillStyle = WHITE; c.fillRect(w * .06 + p * w * .88, ty - 8, 2, 52);
+      },
+      ugc(c, w, h, t) {
+        c.fillStyle = LILAC; c.fillRect(0, 0, w, h);
+        const ph = h * .8, pw = ph * .56, px = w * .93 - pw, py = h * .1;
+        c.fillStyle = "#8F7BE8"; rr(c, px + 8, py + 8, pw, ph, 18); c.fill();
+        c.save(); rr(c, px, py, pw, ph, 18); c.clip();
+        c.fillStyle = "#F4F1FF"; c.fillRect(px, py, pw, ph);
+        const cx = px + pw / 2, bob = Math.sin(t * 2.4) * 2.5, hr = pw * .2, hy = py + ph * .44 + bob;
+        c.fillStyle = INK; c.beginPath(); c.arc(cx, py + ph * .9 + bob, pw * .38, Math.PI, 0); c.fill();
+        c.fillStyle = "#2B2838"; c.beginPath(); c.arc(cx, hy, hr, 0, 7); c.fill();
+        c.fillStyle = WHITE;
+        if (t % 3 < .12) { c.fillRect(cx - hr * .5, hy - hr * .12, hr * .3, 2); c.fillRect(cx + hr * .2, hy - hr * .12, hr * .3, 2); }
+        else { c.beginPath(); c.arc(cx - hr * .35, hy - hr * .1, hr * .11, 0, 7); c.fill(); c.beginPath(); c.arc(cx + hr * .35, hy - hr * .1, hr * .11, 0, 7); c.fill(); }
+        const m = .2 + Math.abs(Math.sin(t * 9)) * Math.max(0, Math.sin(t * 1.3)) * .8;
+        c.fillStyle = LIME; c.beginPath(); c.ellipse(cx, hy + hr * .45, hr * .3, hr * (.06 + m * .16), 0, 0, 7); c.fill();
+        if ((t * 1.2) % 2 < 1.3) { c.fillStyle = "#FF5A5F"; c.beginPath(); c.arc(px + 15, py + 17, 4, 0, 7); c.fill(); }
+        c.fillStyle = INK; c.font = "800 10px Unbounded, Arial, sans-serif"; c.textBaseline = "middle"; c.fillText("REC", px + 23, py + 17.5);
+        const capW = pw * .7 * ease(Math.min(1, (t % 2.5) / 1.2));
+        c.fillStyle = LIME; rr(c, px + pw * .15, py + ph * .84, Math.max(capW, 1), 9, 4.5); c.fill();
+        c.fillStyle = WHITE; rr(c, px + pw * .25, py + ph * .9, Math.max(capW * .7, 1), 7, 3.5); c.fill();
+        c.restore();
+        c.strokeStyle = INK; c.lineWidth = 6; rr(c, px, py, pw, ph, 18); c.stroke();
+        for (let i = 0; i < 5; i++) {
+          const q = (t * .3 + i / 5) % 1;
+          c.globalAlpha = Math.min(1, (1 - q) * 1.6) * Math.min(1, q * 6);
+          c.fillStyle = i % 2 ? WHITE : INK;
+          heart(c, px - 16 + Math.sin(q * 6 + i * 2) * 9, py + ph * .8 - q * ph * .7, 6 + (i % 3) * 2);
+        }
+        c.globalAlpha = 1;
+        const n = Math.min(5, Math.floor((t % LOOP) / .45));
+        for (let i = 0; i < 5; i++) {
+          const pop = i === n - 1 ? 1 + Math.max(0, .3 - ((t % LOOP) - (i + 1) * .45)) : 1;
+          c.fillStyle = i < n ? INK : "rgba(23,21,31,.18)";
+          star5(c, w * .08 + i * h * .11, h * .5, h * .045 * pop);
+        }
       },
       motion(c, w, h, t) {
         c.fillStyle = LILAC; c.fillRect(0, 0, w, h);
@@ -1000,76 +1046,95 @@ const BRAND_ICONS = {
     }
   }
 
-  /* ---------------- "Inside the edit" timeline (home) ----------------
-     A playhead runs along an editing timeline; each clip it crosses is
-     applied to the preview (colour, audio, subtitles, branding), then the
-     video exports. All motion is CSS; this only switches steps and runs
-     the timecode. Hovering, tapping or focusing a checklist line jumps there. */
-  const ed = $("#editor.ed");
-  if (ed) (function () {
-    const box = ed.closest(".ba-wrap");
-    const rows = $$(".ed-row[data-k]", ed), st = $(".ed-st", ed), tc = $(".ed-tc", ed);
+  /* ---------------- "Inside the edit" floating 3D cards (home) ----------------
+     Four cards float around the video. One at a time each card lifts,
+     flies into the video and lands with a flash, adding its layer
+     (1 colour, 2 audio, 3 subtitles, 4 branding). Then the video is
+     ready to post, the cards fly back out and it loops. This only toggles
+     classes on .fc; style.css does the drawing. Hovering, tapping or
+     focusing a checklist line (or a card) jumps to that step. */
+  const fc = $("#editor.fc");
+  if (fc) (function () {
+    const box = fc.closest(".ba-wrap");
+    const cards = $$(".fc-card", fc), st = $(".fc-st", fc);
     const items = $$("[data-ed-step]", box);
     // EDIT the status text here if you like
-    const PHASES = [
-      { ms: 1800, label: "Raw footage" },
-      { ms: 2300, label: "Colour grading" },
-      { ms: 2300, label: "Cleaning audio" },
-      { ms: 2400, label: "Adding subtitles" },
-      { ms: 2300, label: "Adding branding" },
-      { ms: 3800, label: "Ready to post ✓" },
-    ];
-    const LENGTH = 30, FPS = 25; // timeline length in seconds, for the timecode
-    let idx = 0, timer = null, visible = false, held = false, tcNow = 0, tcRaf = 0;
+    const LABELS = ["Raw footage", "Colour grading", "Mixing audio", "Adding subtitles", "Adding branding"];
+    const READY = "Ready to post ✓", NEXT = "Next video…";
+    // Timings in ms
+    const T = { start: 1500, lift: 800, fly: 760, hold: 1350, ready: 3400, back: 1500 };
 
-    const pad = n => String(n).padStart(2, "0");
-    const fmt = s => { const f = Math.round(s * FPS); return `00:${pad(Math.floor(f / FPS / 60))}:${pad(Math.floor(f / FPS) % 60)}:${pad(f % FPS)}`; };
-    const tween = (to, ms) => {
-      cancelAnimationFrame(tcRaf);
-      const from = tcNow, t0 = performance.now();
-      const tick = now => {
-        const k = ms ? Math.min(1, Math.max(0, (now - t0) / ms)) : 1;
-        tcNow = from + (to - from) * k; tc.textContent = fmt(tcNow);
-        if (k < 1) tcRaf = requestAnimationFrame(tick);
-      };
-      tick(t0);
+    let timers = [], held = false, visible = false, label = LABELS[0];
+    const later = (fn, ms) => timers.push(setTimeout(fn, ms));
+    const clear = () => { timers.forEach(clearTimeout); timers = []; };
+    const setLabel = s => {
+      if (s === label) return;
+      label = s; st.textContent = s;
+      st.classList.remove("swap"); void st.offsetWidth; st.classList.add("swap");
     };
-
-    const show = (n, jump) => {
-      ed.dataset.step = n;
-      ed.classList.toggle("jump", !!jump);
-      for (let k = 1; k <= 5; k++) ed.classList.toggle("s" + k, k <= n);
-      rows.forEach(r => r.classList.toggle("on", +r.dataset.k === n));
-      st.textContent = PHASES[n].label;
-      box.classList.toggle("lx-focus", n >= 1 && n <= 4);
+    const focus = n => {
+      box.classList.toggle("lx-focus", n > 0);
       items.forEach(li => li.classList.toggle("lx-on", +li.dataset.edStep === n));
-      tween(Math.min(n, 4) / 4 * LENGTH, reduceMotion ? 0 : jump ? 450 : n === 0 ? 500 : 1600);
     };
-    const stop = () => { clearTimeout(timer); timer = null; };
-    const run = () => {
-      stop();
-      if (!visible || held || reduceMotion) return;
-      show(idx);
-      timer = setTimeout(() => { idx = (idx + 1) % PHASES.length; run(); }, PHASES[idx].ms);
+    // docked = cards inside the video, fx = layers applied, lift = card glowing before take-off
+    const show = (docked, fx, lift = 0, done = false) => {
+      cards.forEach(c => { const k = +c.dataset.k; c.classList.toggle("dock", k <= docked); c.classList.toggle("lift", k === lift); });
+      for (let i = 1; i <= 4; i++) fc.classList.toggle("e" + i, i <= fx);
+      fc.classList.toggle("done", done);
     };
+    const hit = () => { fc.classList.remove("hit"); void fc.offsetWidth; fc.classList.add("hit"); };
 
-    // Checklist: hover / tap / keyboard focus jumps to that step
-    const hold = n => { held = true; stop(); idx = n; show(n, true); };
-    const release = () => { if (!held) return; held = false; if (reduceMotion) show(5); else run(); };
-    items.forEach(li => {
-      const n = +li.dataset.edStep;
-      li.addEventListener("pointerenter", () => hold(n));
-      li.addEventListener("pointerleave", release);
-      li.addEventListener("focus", () => hold(n));
-      li.addEventListener("blur", release);
+    function play(from) {
+      clear();
+      let t = 0;
+      if (from === 0) { show(0, 0); setLabel(LABELS[0]); focus(0); t = T.start; }
+      for (let i = from + 1; i <= 4; i++) {
+        later(() => { show(i - 1, i - 1, i); setLabel(LABELS[i]); focus(i); }, t); t += T.lift;
+        later(() => show(i, i - 1), t); t += T.fly;
+        later(() => { show(i, i); hit(); }, t); t += T.hold;
+      }
+      later(() => { show(4, 4, 0, true); setLabel(READY); focus(0); }, t); t += T.ready;
+      later(() => { show(0, 0); setLabel(NEXT); }, t); t += T.back;
+      later(() => play(0), t);
+    }
+
+    // Checklist lines and cards: hover / tap / keyboard focus jumps to that step
+    const hold = n => { held = true; clear(); show(n, n); setLabel(LABELS[n]); focus(n); };
+    const release = () => {
+      if (!held) return;
+      held = false;
+      if (reduceMotion) { show(4, 4, 0, true); setLabel(READY); focus(0); return; }
+      const n = cards.filter(c => c.classList.contains("dock")).length;
+      if (visible) play(n);
+    };
+    [...items, ...cards].forEach(el => {
+      const n = +(el.dataset.edStep || el.dataset.k);
+      el.addEventListener("pointerenter", () => hold(n));
+      el.addEventListener("pointerleave", release);
+      el.addEventListener("focus", () => hold(n));
+      el.addEventListener("blur", release);
     });
 
-    // Reduced motion: show the finished edit; hovering still jumps between steps
-    if (reduceMotion) { show(5); return; }
+    // Gentle 3D tilt that follows the cursor (mouse only)
+    if (finePointer && !reduceMotion) {
+      fc.addEventListener("pointermove", e => {
+        const r = fc.getBoundingClientRect();
+        fc.style.setProperty("--rx", (((e.clientX - r.left) / r.width - .5) * 10).toFixed(2) + "deg");
+        fc.style.setProperty("--ry", ((.5 - (e.clientY - r.top) / r.height) * 8).toFixed(2) + "deg");
+      });
+      fc.addEventListener("pointerleave", () => { fc.style.setProperty("--rx", "0deg"); fc.style.setProperty("--ry", "0deg"); });
+    }
+
+    // Reduced motion: show the finished video; the checklist still jumps between steps
+    if (reduceMotion) { show(4, 4, 0, true); setLabel(READY); return; }
 
     if ("IntersectionObserver" in window) {
-      new IntersectionObserver(([en]) => { visible = en.isIntersecting; visible ? run() : stop(); }, { threshold: .25 }).observe(ed);
-    } else { visible = true; run(); }
+      new IntersectionObserver(([en]) => {
+        visible = en.isIntersecting;
+        if (held) return;
+        if (visible) play(0); else clear();
+      }, { threshold: .25 }).observe(fc);
+    } else { visible = true; play(0); }
   })();
 
   /* ---------------- Contact forms ---------------- */
@@ -1082,7 +1147,7 @@ const BRAND_ICONS = {
     sel.innerHTML = `<option value="">Choose a budget</option>` + CONFIG.budgets.map(b => `<option>${esc(b)}</option>`).join("");
   });
 
-  // Pre-select a service: contact.html?service=motion-graphics
+  // Pre-select a service: contact.html?service=ugc-ads
   const preset = new URLSearchParams(location.search).get("service");
   const mainForm = $("#contact-form");
   const pickService = slug => {
@@ -1170,6 +1235,75 @@ const BRAND_ICONS = {
       sel.innerHTML = `<option value="">Choose a budget</option>` + CONFIG.budgets.map(b => `<option>${esc(b)}</option>`).join("");
     });
   }
+
+  /* ---------------- About hero: reel stack ----------------
+     Builds each .ab-reel from its data-tag / data-cap, fans the cards out,
+     then every few seconds swipes the top card away to the back of the pile
+     and types the next card's caption. Tilts toward the mouse. */
+  (function () {
+    const stack = $("#ab-stack");
+    if (!stack) return;
+    const box = stack.parentElement;
+    const cards = $$(".ab-reel", stack);
+    // stack positions, front first: [x, y, rotate, scale, opacity]
+    const POS = [[0, 0, -3, 1, 1], [-27, 3, -11, .92, 1], [27, 5, 9, .9, 1], [0, 7, 2, .84, 1], [0, 7, 2, .84, 0]];
+    const FLY = [130, -28, 24, .9, 0];
+    const place = (c, p, z) => {
+      [["--x", p[0] + "%"], ["--y", p[1] + "%"], ["--r", p[2] + "deg"], ["--s", p[3]], ["--o", p[4]]].forEach(([k, v]) => c.style.setProperty(k, v));
+      c.style.zIndex = z;
+    };
+    cards.forEach(c => {
+      c.innerHTML = `
+        <div class="ab-bars"><i></i><i></i><i></i></div>
+        <div class="ab-top"><span class="ab-tag">${esc(c.dataset.tag)}</span><span class="ab-live">● 0:${String(15 + Math.floor(Math.random() * 40))}</span></div>
+        <div class="ab-art"><span class="ab-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></div>
+        <p class="ab-cap"><span></span></p>
+        <div class="ab-foot"><b>a</b><span>@adsource</span><em>♥</em></div>`;
+    });
+
+    let order = cards.slice(), typer = 0;
+    const layout = () => order.forEach((c, i) => place(c, POS[Math.min(i, POS.length - 1)], order.length - i));
+    const front = () => {
+      const c = order[0], cap = $(".ab-cap span", c), text = c.dataset.cap;
+      cards.forEach(x => x.classList.remove("is-front", "typed"));
+      void c.offsetWidth; // restart the CSS animations on the new top card
+      c.classList.add("is-front");
+      clearInterval(typer);
+      if (reduceMotion) { cap.textContent = text; c.classList.add("typed"); return; }
+      let n = 0;
+      cap.textContent = "";
+      typer = setInterval(() => {
+        cap.textContent = text.slice(0, ++n);
+        if (n >= text.length) { clearInterval(typer); c.classList.add("typed"); }
+      }, 45);
+    };
+    // fill every caption up-front so the cards behind aren't blank
+    cards.forEach(c => { $(".ab-cap span", c).textContent = c.dataset.cap; });
+    layout();
+    front();
+    if (reduceMotion) return;
+
+    let visible = true;
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(box);
+    setInterval(() => {
+      if (!visible || document.hidden) return;
+      const top = order.shift();
+      top.classList.add("is-flying");
+      place(top, FLY, order.length + 2);
+      order.push(top);
+      layout();
+      place(top, FLY, order.length + 2); // keep it flying out on top for now
+      front();
+      setTimeout(() => { top.classList.remove("is-flying"); place(top, POS[POS.length - 1], 0); }, 520);
+    }, 3600);
+
+    box.addEventListener("pointermove", e => {
+      const r = box.getBoundingClientRect();
+      box.style.setProperty("--tx", ((e.clientX - r.left) / r.width - .5).toFixed(3));
+      box.style.setProperty("--ty", ((e.clientY - r.top) / r.height - .5).toFixed(3));
+    });
+    box.addEventListener("pointerleave", () => { box.style.setProperty("--tx", 0); box.style.setProperty("--ty", 0); });
+  })();
 
   /* ---------------- Service card → page transition ----------------
      Clicking a service card darkens it, then a dark panel grows from the
@@ -1284,7 +1418,7 @@ const BRAND_ICONS = {
     const tri = triangle(.62, WHITE, .1); tri.position.set(.06, 0, .2); play.add(tri);
     add(play, { pos: [-2.0, 1.45, -.4], rot: [-.2, .45, 0], label: "YouTube video editing", link: "youtube-editing" });
 
-    /* Clapperboard — Motion graphics */
+    /* Clapperboard — UGC ads */
     const clap = new THREE.Group();
     clap.add(slab(1.55, 1.05, .1, INK, .16));
     [.12, -.18].forEach(y => { const l = box3(1.15, .05, .04, WHITE); l.position.set(0, y, .14); clap.add(l); });
@@ -1292,7 +1426,7 @@ const BRAND_ICONS = {
     const baseBar = new THREE.Group(); stripes(baseBar); baseBar.position.set(0, .66, 0); clap.add(baseBar);
     const hinge = new THREE.Group(); hinge.position.set(-.775, .8, 0);
     const topBar = new THREE.Group(); stripes(topBar); topBar.position.set(.775, .13, 0); hinge.add(topBar); clap.add(hinge);
-    add(clap, { pos: [1.95, 1.4, -.6], rot: [.18, -.42, -.08], label: "Motion graphics", link: "motion-graphics" });
+    add(clap, { pos: [1.95, 1.4, -.6], rot: [.18, -.42, -.08], label: "UGC ads", link: "ugc-ads" });
 
     /* Video camera — Video ads */
     const cam = new THREE.Group();
@@ -1387,4 +1521,72 @@ const BRAND_ICONS = {
       renderer.render(scene, camera);
     })();
   }
+})();
+
+/* ---------------------------------------------------------------------
+   CREATIVE REACTOR — homepage section (cycles through 4 editing stages)
+   --------------------------------------------------------------------- */
+(() => {
+  const root = document.querySelector(".ads-reactor");
+  if (!root) return;
+
+  const stage = root.querySelector(".ads-stage");
+  const buttons = [...root.querySelectorAll("[data-stage]")];
+  const pause = root.querySelector(".ads-pause");
+  const status = root.querySelector(".ads-status");
+  const counter = root.querySelector(".ads-counter");
+  const progress = root.querySelector(".ads-progress span");
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const labels = ["Finding the story", "Building the feeling", "Making every word move", "Ready for the spotlight"];
+
+  let current = 0;
+  let paused = reducedMotion.matches;
+  let visible = true;
+  let timer;
+
+  function show(index) {
+    current = index;
+    stage.dataset.scene = String(index);
+    status.textContent = labels[index];
+    counter.textContent = `0${index + 1} / 04`;
+    progress.style.width = `${(index + 1) * 25}%`;
+    buttons.forEach((button, i) => {
+      button.classList.toggle("is-active", i === index);
+      button.setAttribute("aria-pressed", String(i === index));
+    });
+  }
+
+  function schedule() {
+    clearTimeout(timer);
+    if (paused || !visible || document.hidden) return;
+    timer = setTimeout(() => { show((current + 1) % 4); schedule(); }, 3400);
+  }
+
+  function updatePlayback() {
+    root.classList.toggle("is-paused", paused);
+    pause.textContent = paused ? "▶" : "Ⅱ";
+    pause.setAttribute("aria-label", paused ? "Play animation" : "Pause animation");
+    schedule();
+  }
+
+  buttons.forEach((button, index) => button.addEventListener("click", () => { show(index); schedule(); }));
+  pause.addEventListener("click", () => { paused = !paused; updatePlayback(); });
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      root.classList.toggle("is-offscreen", !visible);
+      schedule();
+    }, { threshold: .15 }).observe(root);
+  }
+  document.addEventListener("visibilitychange", schedule);
+
+  reducedMotion.addEventListener("change", (event) => {
+    paused = event.matches;
+    if (paused) show(3);
+    updatePlayback();
+  });
+
+  show(reducedMotion.matches ? 3 : 0);
+  updatePlayback();
 })();
