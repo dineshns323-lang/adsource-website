@@ -1309,3 +1309,143 @@ html.as-arriving body::after {
 @media (prefers-reduced-motion: reduce) {
   .ads-reactor *, .ads-reactor *::before, .ads-reactor *::after { animation: none !important; transition: none !important; }
 }
+
+/* =====================================================================
+   PHONE POLISH
+   Everything below applies ONLY to screens 640px wide or narrower.
+   Desktop and tablet layouts are not affected.
+   ===================================================================== */
+@media (max-width: 640px) {
+  :root { --header-h: 62px; }
+  html { -webkit-tap-highlight-color: transparent; }
+
+  /* ---- Header ---- */
+  .site-header { background: rgba(246, 246, 240, .92); }
+  .nav { gap: 12px; }
+  .logo { gap: 8px; }
+  .logo .logo-icon { width: 34px; height: 34px; border-radius: 9px; }
+  .logo .logo-word { height: 16px; }
+  .nav-toggle { width: 42px; height: 42px; border-width: 1.5px; }
+  .nav-toggle span { left: 11px; right: 11px; }
+  .nav-toggle span:nth-child(1) { top: 13px; }
+  .nav-toggle span:nth-child(2) { top: 19px; }
+  .nav-toggle span:nth-child(3) { top: 25px; }
+
+  /* ---- Mobile menu: full-screen, big tap targets, button pinned to bottom ---- */
+  .nav-links { padding: 14px 16px calc(20px + env(safe-area-inset-bottom)); gap: 0; }
+  .nav-links a:not(.btn) {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 1.75rem; padding: 18px 6px; border-radius: 0; border-bottom: 1px solid var(--line);
+  }
+  .nav-links a:not(.btn)::after { content: "\2192"; font-size: 1.2rem; opacity: .3; transition: transform .25s var(--ease), opacity .25s; }
+  .nav-links a:not(.btn):hover { background: transparent; }
+  .nav-links a:not(.btn):active::after { transform: translateX(4px); opacity: 1; }
+  .nav-links a[aria-current="page"] { background: transparent; color: var(--ink); justify-content: flex-start; }
+  .nav-links a[aria-current="page"]::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--lime); border: 2px solid var(--ink); margin-right: 12px; flex: none; }
+  .nav-links a[aria-current="page"]::after { margin-left: auto; opacity: 1; }
+  .nav-links .btn { margin: auto 0 0; min-height: 58px; font-size: 1.05rem; }
+  .nav-links.open > * { animation: m-menu-in .45s var(--ease) both; }
+  .nav-links.open > :nth-child(2) { animation-delay: .04s; }
+  .nav-links.open > :nth-child(3) { animation-delay: .08s; }
+  .nav-links.open > :nth-child(4) { animation-delay: .12s; }
+  .nav-links.open > :nth-child(5) { animation-delay: .16s; }
+
+  /* ---- Spacing & type ---- */
+  .block { padding: 60px 0; }
+  .block-tight { padding: 48px 0; }
+  h2 { font-size: clamp(1.85rem, 8.4vw, 2.3rem); }
+  .section-head { margin-bottom: 30px; gap: 14px; }
+  .section-head p { font-size: 1rem; }
+
+  /* ---- Home hero ---- */
+  .hero-grid { padding-top: 30px; padding-bottom: 0; gap: 0; }
+  .hero h1 { font-size: clamp(2rem, 9.6vw, 2.55rem); line-height: 1.04; margin: 18px 0 16px; }
+  .hero h1 .hl { -webkit-text-stroke-width: 1.5px; }
+  .hero .lead { font-size: 1.02rem; line-height: 1.6; }
+  .hero-actions { margin-top: 24px; gap: 10px; }
+  .hero-actions .btn { flex: 1 1 100%; min-height: 54px; }
+  .hero-proof { margin-top: 20px; gap: 8px; }
+  .hero-proof span { background: rgba(23, 21, 31, .08); padding: 6px 12px 6px 7px; border-radius: 999px; font-size: .84rem; }
+  .hero-proof span::before { width: 16px; height: 16px; }
+  .hero-visual { height: 300px; }
+
+  /* ---- Inner page heroes ---- */
+  .page-hero { padding: 40px 0 48px; }
+
+  /* ---- Home services: swipeable cards (next card peeks in) ---- */
+  .svc-grid {
+    display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    margin: 0 -16px; padding: 6px 16px 20px; scroll-padding: 0 16px; scrollbar-width: none;
+  }
+  .svc-grid::-webkit-scrollbar { display: none; }
+  .svc-grid > .svc-card { flex: 0 0 86%; scroll-snap-align: start; }
+  .svc-card { padding: 24px 20px 20px; border-radius: 26px; gap: 12px; }
+  .svc-card:hover { transform: none; box-shadow: none; }
+  .svc-card .badge { top: 22px; right: 20px; font-size: .68rem; }
+  .svc-card h3 { font-size: 1.3rem; }
+  .svc-card p { font-size: .95rem; }
+  .svc-card .tags span { font-size: .8rem; padding: 4px 10px; }
+  .svc-card .ico, .why-item .ico { width: 46px; height: 46px; border-radius: 13px; }
+  .svc-card .ico svg, .why-item .ico svg { width: 23px; height: 23px; }
+  .as-go { width: 46px; height: 46px; }
+
+  .svc-mini-grid { gap: 10px; }
+  .svc-mini { padding: 14px 16px; gap: 14px; border-radius: 18px; }
+  .svc-mini .ico { width: 42px; height: 42px; border-radius: 12px; }
+
+  /* ---- How we work: 2 x 2 ---- */
+  .steps { grid-template-columns: 1fr 1fr; gap: 30px 16px; }
+  .step { padding-top: 58px; }
+  .step::before { width: 44px; height: 44px; font-size: .86rem; }
+  .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .step p { font-size: .9rem; line-height: 1.5; }
+
+  /* ---- Why choose us: 2 x 2 ---- */
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .why-item, .why-item + .why-item { padding: 24px 12px 20px 0; border-left: 0; border-top: 1px solid var(--ink-3); }
+  .why-item:nth-child(even) { padding-left: 14px; padding-right: 0; border-left: 1px solid var(--ink-3); }
+  .why-item .ico { margin-bottom: 14px; }
+  .why-item h3 { font-size: 1.02rem; }
+  .why-item p { font-size: .88rem; line-height: 1.5; }
+
+  /* ---- Blog cards ---- */
+  .post-grid { gap: 16px; }
+  .post-card { border-radius: 24px; }
+  .post-card:hover { transform: none; box-shadow: none; }
+  .post-card .cover { aspect-ratio: 2 / 1; }
+  .post-card .body { padding: 20px; gap: 10px; }
+  .post-card h3 { font-size: 1.08rem; }
+  .post-card p { font-size: .93rem; }
+
+  /* ---- FAQ ---- */
+  .faq { gap: 10px; }
+  .faq details { border-radius: 18px; }
+  .faq summary { padding: 18px 56px 18px 20px; font-size: .98rem; }
+  .faq summary::after { right: 16px; width: 28px; height: 28px; margin-top: -14px; }
+  .faq .answer { padding: 0 20px 20px; font-size: .95rem; }
+
+  /* ---- Contact cards: icon left, text right ---- */
+  .contact-info { gap: 10px; margin-bottom: 36px; }
+  .info-card { display: grid; grid-template-columns: 46px 1fr; column-gap: 14px; row-gap: 2px; align-items: center; padding: 16px 18px; border-radius: 20px; }
+  .info-card .ico { grid-row: span 2; }
+  .info-card small { font-size: .72rem; align-self: end; }
+  .info-card strong { align-self: start; font-size: 1rem; }
+
+  /* ---- Call-to-action & forms ---- */
+  .cta-band { padding: 40px 20px; border-radius: 28px; }
+  .cta-band p { font-size: 1rem; margin-bottom: 24px; }
+  .cta-band .actions .btn { flex: 1 1 100%; }
+  .contact-card { padding: 28px 16px; border-radius: 26px; }
+
+  /* ---- Footer: compact 2-column links ---- */
+  .site-footer { padding: 48px 0 calc(28px + env(safe-area-inset-bottom)); margin-top: 60px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+  .foot-grid > :first-child, .foot-grid > :last-child { grid-column: 1 / -1; }
+  .foot-about { margin: 16px 0 18px; }
+  .site-footer h2 { margin-bottom: 14px; }
+  .foot-bottom { margin-top: 36px; flex-direction: column; align-items: flex-start; }
+
+  /* ---- Floating WhatsApp ---- */
+  .wa-float { width: 52px; height: 52px; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); }
+}
+@keyframes m-menu-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }

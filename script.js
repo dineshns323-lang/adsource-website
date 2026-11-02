@@ -29,9 +29,10 @@ const CONFIG = {
   // Your social media profile links
   socials: {
     instagram: "https://www.instagram.com/adsource.in/",
-    youtube: "https://youtube.com/@[YOUR-CHANNEL]",
-    facebook: "https://facebook.com/[YOUR-PAGE]",
-    linkedin: "https://linkedin.com/company/[YOUR-COMPANY]",
+    // Leave a link empty ("") to hide its icon. Paste the URL to show it.
+    youtube: "",
+    facebook: "",
+    linkedin: "",
   },
 
   /* CONTACT FORM DELIVERY
@@ -565,10 +566,10 @@ const BRAND_ICONS = {
             ${logo(true)}
             <p class="foot-about">${esc(CONFIG.tagline)}</p>
             <div class="socials">
-              <a href="${s.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${brand("instagram")}</a>
-              <a href="${s.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${brand("youtube")}</a>
-              <a href="${s.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${brand("facebook")}</a>
-              <a href="${s.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${brand("linkedin")}</a>
+              ${[["instagram", "Instagram"], ["youtube", "YouTube"], ["facebook", "Facebook"], ["linkedin", "LinkedIn"]]
+                .filter(([k]) => s[k])
+                .map(([k, n]) => `<a href="${s[k]}" target="_blank" rel="noopener" aria-label="${n}">${brand(k)}</a>`)
+                .join("")}
             </div>
           </div>
           <div>
