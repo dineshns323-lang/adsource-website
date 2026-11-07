@@ -21,9 +21,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="showreel.css">
 <script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("asZoom")){sessionStorage.removeItem("asZoom");if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("as-arriving")}}catch(e){}</script>
-<!-- 3D library for the hero animation (home page only) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script src="script.js" defer></script>
 </head>
 <body data-page="home">
@@ -60,16 +59,127 @@
           <span>AI-powered workflow</span>
         </div>
       </div>
-      <div class="hero-visual">
-        <canvas id="scene" role="img" aria-label="3D video icons: a play button, clapperboard, phone, video camera and editing timeline. Click one to see that service."></canvas>
-        <div class="tip" id="tip"></div>
-        <span class="scene-hint" id="hint">Move your mouse · click a shape</span>
+      <!-- HERO VISUAL: real clips playing in an editor window. Clips are in /videos -->
+      <div class="hero-visual hv" aria-label="Showreel: real video clips edited by AdSource playing in an editing timeline">
+        <div class="hv-monitor">
+          <div class="hv-bar">
+            <span class="hv-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="hv-file">adsource_showreel_final_v3.mp4</span>
+            <span class="hv-tc" aria-hidden="true">00:00:00:00</span>
+          </div>
+          <div class="hv-screen">
+            <video class="hv-vid" src="videos/editor-desk.mp4" data-label="Colour grade · applied" muted playsinline preload="auto"></video>
+            <video class="hv-vid" src="videos/youtube-creator.mp4" data-label="YouTube edit · cuts &amp; captions" muted playsinline preload="metadata"></video>
+            <video class="hv-vid" src="videos/product-ad.mp4" data-label="Product ad · slow-mo" muted playsinline preload="metadata"></video>
+            <video class="hv-vid" src="videos/cinematic-broll.mp4" data-label="Cinematic B-roll · graded" muted playsinline preload="metadata"></video>
+            <span class="hv-rec"><i></i>LIVE EDIT</span>
+            <span class="hv-safe" aria-hidden="true"></span>
+            <span class="hv-label">Colour grade · applied</span>
+          </div>
+          <div class="hv-tl">
+            <div class="hv-track">
+              <button class="hv-seg" style="--c:#CCF140" aria-label="Play clip 1: colour grade">Grade</button>
+              <button class="hv-seg" style="--c:#B8A6FF" aria-label="Play clip 2: YouTube edit">YouTube</button>
+              <button class="hv-seg" style="--c:#FFB38A" aria-label="Play clip 3: product ad">Product ad</button>
+              <button class="hv-seg" style="--c:#7FD6C2" aria-label="Play clip 4: cinematic B-roll">B-roll</button>
+            </div>
+            <div class="hv-audio" aria-hidden="true"></div>
+            <span class="hv-head" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="hv-phone" aria-hidden="true">
+          <video src="videos/ugc-skincare.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <span class="hv-phone-cap">this changed my <em>skin</em> 😍</span>
+        </div>
+        <span class="hv-chip hv-chip-a"><b>✓</b> 4K export ready</span>
+        <span class="hv-chip hv-chip-b"><b>▶</b> 9:16 · 16:9 · 1:1</span>
       </div>
     </div>
   </section>
 
   <!-- ================= PLATFORM STRIP (icons are added by script.js) ================= -->
   <div class="marquee" id="platform-strip" role="img" aria-label="Platforms we work with: YouTube, Instagram, Facebook, Meta, TikTok, Amazon, Flipkart and Shopify"></div>
+
+  <!-- ================= SHOWREEL: real video clips (styles in showreel.css, logic in showreel.js) ================= -->
+  <section class="block dark reel" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Our work</span>
+          <h2>Real footage. <span class="hl-lime">Edited to perform.</span></h2>
+        </div>
+        <p>A taste of what we deliver — long-form YouTube, UGC ads, product spots, Reels and cinematic B-roll. Click any clip to watch it full screen.</p>
+      </div>
+
+      <div class="reel-filters" role="group" aria-label="Filter clips">
+        <button data-filter="all" aria-pressed="true">All work</button>
+        <button data-filter="youtube" aria-pressed="false">YouTube</button>
+        <button data-filter="ugc" aria-pressed="false">UGC ads</button>
+        <button data-filter="ads" aria-pressed="false">Product ads</button>
+        <button data-filter="reels" aria-pressed="false">Reels &amp; Shorts</button>
+        <button data-filter="cinematic" aria-pressed="false">Cinematic</button>
+      </div>
+
+      <div class="reel-grid">
+        <article class="reel-tile big" data-cat="youtube" tabindex="0" aria-label="Play: YouTube creator edit">
+          <video src="videos/youtube-creator.mp4" muted loop playsinline preload="metadata"></video>
+          <span class="reel-tag">YouTube editing</span><span class="reel-ratio">16:9</span>
+          <span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+          <div class="reel-info"><h3>Creator talking-head edit</h3><p>Tight jump cuts, punch-in zooms, colour and captions that keep viewers past the first 30 seconds.</p></div>
+          <span class="reel-prog"></span>
+        </article>
+        <article class="reel-tile tall" data-cat="ugc ads" tabindex="0" aria-label="Play: UGC skincare ad">
+          <video src="videos/ugc-skincare.mp4" muted loop playsinline preload="metadata"></video>
+          <span class="reel-tag">UGC ad</span><span class="reel-ratio">9:16</span>
+          <span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+          <div class="reel-info"><h3>Skincare UGC</h3><p>Phone-shot, authentic, built for Meta.</p></div>
+          <span class="reel-prog"></span>
+        </article>
+        <article class="reel-tile tall" data-cat="reels" tabindex="0" aria-label="Play: street dance reel">
+          <video src="videos/reel-dance.mp4" muted loop playsinline preload="metadata"></video>
+          <span class="reel-tag">Reels &amp; Shorts</span><span class="reel-ratio">9:16</span>
+          <span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+          <div class="reel-info"><h3>Street-style reel</h3><p>Whip pans, beat-synced cuts.</p></div>
+          <span class="reel-prog"></span>
+        </article>
+        <article class="reel-tile wide" data-cat="ads" tabindex="0" aria-label="Play: product commercial">
+          <video src="videos/product-ad.mp4" muted loop playsinline preload="metadata"></video>
+          <span class="reel-tag">Product ad</span><span class="reel-ratio">16:9</span>
+          <span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+          <div class="reel-info"><h3>Premium product spot</h3><p>Macro slow-mo and brand-colour lighting.</p></div>
+          <span class="reel-prog"></span>
+        </article>
+        <article class="reel-tile" data-cat="cinematic" tabindex="0" aria-label="Play: cinematic drone B-roll">
+          <video src="videos/cinematic-broll.mp4" muted loop playsinline preload="metadata"></video>
+          <span class="reel-tag">Cinematic</span><span class="reel-ratio">16:9</span>
+          <span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+          <div class="reel-info"><h3>Drone B-roll grade</h3></div>
+          <span class="reel-prog"></span>
+        </article>
+        <article class="reel-tile" data-cat="youtube cinematic" tabindex="0" aria-label="Play: inside our edit suite">
+          <video src="videos/editor-desk.mp4" muted loop playsinline preload="metadata"></video>
+          <span class="reel-tag">Behind the edit</span><span class="reel-ratio">16:9</span>
+          <span class="reel-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+          <div class="reel-info"><h3>Inside the edit suite</h3></div>
+          <span class="reel-prog"></span>
+        </article>
+      </div>
+
+      <div class="reel-cta">
+        <p>Want your footage to look like this? Send us a clip and we'll show you.</p>
+        <a class="btn btn-lime" href="#contact">Get a free test edit <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox for the showreel -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Video player" aria-hidden="true">
+    <div class="lb-box">
+      <button class="lb-close" aria-label="Close video">×</button>
+      <video controls playsinline></video>
+      <div class="lb-cap"><strong class="lb-title"></strong><span class="lb-meta"></span></div>
+    </div>
+  </div>
 
   <!-- ================= SERVICES PREVIEW ================= -->
   <section class="block" id="services">
@@ -159,31 +269,7 @@
           <div class="fc-3d">
             <!-- the video -->
             <div class="fc-frame">
-              <svg class="fc-scene" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <linearGradient id="fcSky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C7BFF"/><stop offset=".6" stop-color="#C79BFF"/><stop offset="1" stop-color="#FFB38A"/></linearGradient>
-                  <radialGradient id="fcGlow"><stop offset="0" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-                </defs>
-                <rect width="320" height="180" fill="url(#fcSky)"/>
-                <circle cx="160" cy="80" r="74" fill="url(#fcGlow)"/>
-                <circle cx="160" cy="80" r="46" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="5"/>
-                <rect x="232" y="98" width="78" height="5" rx="2.5" fill="#2B2347" opacity=".3"/>
-                <rect x="250" y="66" width="22" height="32" rx="4" fill="#CCF140"/>
-                <rect x="278" y="80" width="14" height="18" rx="3" fill="#fff"/>
-                <path d="M26 152h30l-4 28H30z" fill="#2B2347"/>
-                <ellipse cx="34" cy="134" rx="7" ry="18" transform="rotate(-25 34 134)" fill="#5BBF7A"/>
-                <ellipse cx="48" cy="130" rx="7" ry="20" transform="rotate(22 48 130)" fill="#3FA463"/>
-                <ellipse cx="41" cy="126" rx="6" ry="22" fill="#6BD08A"/>
-                <g class="fc-person">
-                  <path d="M104 180c2-38 26-58 56-58s54 20 56 58z" fill="#2B2347"/>
-                  <path d="M146 124l14 13 14-13" fill="none" stroke="#CCF140" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="152" y="98" width="16" height="16" rx="6" fill="#E3A07A"/>
-                  <circle cx="160" cy="80" r="22" fill="#F2B48C"/>
-                  <path d="M138 80c-1-17 9-28 22-28s24 9 23 26c-6-7-14-10-23-10s-16 5-22 12z" fill="#2B2347"/>
-                  <circle cx="152" cy="83" r="2" fill="#2B2347"/><circle cx="168" cy="83" r="2" fill="#2B2347"/>
-                  <path class="fc-mouth" d="M154 91q6 5 12 0" fill="none" stroke="#2B2347" stroke-width="2" stroke-linecap="round"/>
-                </g>
-              </svg>
+              <video class="fc-scene" src="videos/youtube-creator.mp4" muted loop playsinline preload="metadata" data-autoplay-visible aria-hidden="true"></video>
               <span class="fc-raw">Raw · 4K</span>
               <span class="fc-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>Clean mix</b></span>
               <img class="fc-bug" src="images/logo-icon.png" alt="" width="256" height="256">
@@ -276,9 +362,7 @@
       </div>
       <div class="ads-film">
         <div class="ads-art">
-          <div class="ads-sun"></div>
-          <div class="ads-mountain mountain-back"></div>
-          <div class="ads-mountain mountain-front"></div>
+          <video src="videos/reel-dance.mp4" muted loop playsinline preload="metadata" data-autoplay-visible aria-hidden="true"></video>
         </div>
         <div class="ads-film-top"><img class="ads-logo" src="images/logo-icon.png" alt="adsource" width="30" height="30"><span>BUILT TO BE SEEN</span></div>
         <div class="ads-film-title">
